@@ -25,17 +25,17 @@ function App() {
   const convert = ()=> {setConvertedAmount(amount * currencyInfo[to])}
 
   return (
-    <div style={{width:"100%",height:"100vh", backgroundImage:`URL("https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")`}}>
-    <h1>Hello React App</h1>
+    <div className='app-main'>
+    <h1>Welcome to the currency app</h1>
     <form onSubmit={(event)=>{
       event.preventDefault();
       convert()
     }}>
 
     <InputBox label="from" amount={amount} onAmountChange={(amount)=>setAmount(amount)}  currencyOptions={options} oncurrencyChange={(currancy)=>setFrom(currancy)} selectCurreancy={from}/>
-    <button onClick={swap}>swap</button>
+    <button className="swap-button" onClick={swap}>swap</button>
     <InputBox label="to" amount={convertedAmount} currencyOptions={options} oncurrencyChange={(currency)=> setTo(currency)} selectCurreancy={to}/>
-    <button type='submit'>{from} convert {to}</button>
+    <button className="convert-button" type="submit">{from} convert {to}</button>
     </form>
     </div>
   );

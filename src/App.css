@@ -4,15 +4,122 @@
     color: #ffff;
 }
 
-button{
-    color: #000000;
+.app-main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
-input{
-    color: #000000;
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 50px;
+    background: linear-gradient(135deg, #8d8d8d, #39c73f);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    width: 300px;
+    margin: 20px auto;
 }
-select{
-    color: #000000;
+
+.input-box label {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
 }
-option{
-    color: #000000;
+
+.input-box input,
+.input-box select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    color: #333;
+    font-size: 1rem;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+.input-box input:focus,
+.input-box select:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.input-box select {
+    cursor: pointer;
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6" fill="black"><path d="M0 0h10L5 6z"/></svg>')
+        no-repeat right 10px center;
+    background-size: 10px;
+}
+
+.input-box option {
+    padding: 10px;
+}
+
+.input-box input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* General Button Styles */
+button {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    width: -webkit-fill-available;
+}
+
+/* Swap Button */
+.swap-button {
+    background-color: #ff7e5f;
+    color: white;
+    box-shadow: 0 4px 8px rgba(255, 126, 95, 0.4);
+}
+
+.swap-button:hover {
+    background-color: #ff5f57;
+    box-shadow: 0 6px 12px rgba(255, 95, 87, 0.6);
+    transform: translateY(-2px);
+}
+
+.swap-button:active {
+    background-color: #ff5f57;
+    box-shadow: 0 2px 6px rgba(255, 95, 87, 0.4);
+    transform: translateY(2px);
+}
+
+/* Convert Button */
+.convert-button {
+    background-color: #5e35b1db;
+    color: white;
+    box-shadow: 0 4px 8px #7482ce;
+    text-transform: capitalize;
+}
+
+.convert-button:hover {
+    background-color: #5e35b1;
+    box-shadow: 0 2px 6px #673AB7;
+    transform: translateY(2px);
+}
+
+.convert-button:active {
+    background-color: #5e35b1;
+    box-shadow: 0 2px 6px #673AB7;
+    transform: translateY(2px);
+}
+
