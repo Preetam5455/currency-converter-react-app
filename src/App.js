@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className='app-main'>
-    <h1>Welcome to the currency app</h1>
+    <h1>Welcome to the currency converter</h1>
     <form onSubmit={(event)=>{
       event.preventDefault();
       convert()
